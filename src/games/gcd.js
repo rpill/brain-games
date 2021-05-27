@@ -1,27 +1,33 @@
 import runCoreGame from '../index.js';
 import getRandom from '../utils.js';
 
-const desciption = 'What is the result of the expression?';
+const desciption = 'Find the greatest common divisor of given numbers.';
 
-const math = {
-  '+': (a, b) => a + b,
-  '-': (a, b) => a - b,
-  '*': (a, b) => a * b,
+const gcd = (num1, num2) => {
+  const iter = (a, b) => {
+    if (b === 0) {
+      return a;
+    }
+    return iter(b, a % b);
+  };
+
+  if (num1 > num2) {
+    return iter(num1, num2);
+  }
+
+  return iter(num2, num1);
 };
-
-const operators = Object.keys(math);
 
 const getQuestion = () => {
   const firstNumber = Math.ceil(getRandom(1, 99));
   const secondNumber = Math.ceil(getRandom(1, 99));
-  const sign = operators[getRandom(0, operators.length - 1)];
 
-  return `${firstNumber} ${sign} ${secondNumber}`;
+  return `${firstNumber} ${secondNumber}`;
 };
 
 const getAnswer = (expression) => {
-  const [firstNumber, sign, secondNumber] = expression.split(' ');
-  return `${math[sign](Number(firstNumber), Number(secondNumber))}`;
+  const [firstNumber, secondNumber] = expression.split(' ');
+  return `${gcd(firstNumber, secondNumber)}`;
 };
 
 const getData = () => {
