@@ -20,5 +20,5 @@ export default (rule, getData) => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
