@@ -12,8 +12,8 @@ const math = {
 const operators = Object.keys(math);
 
 const getQuestion = () => {
-  const firstNumber = Math.ceil(getRandom(1, 99));
-  const secondNumber = Math.ceil(getRandom(1, 99));
+  const firstNumber = getRandom(1, 99);
+  const secondNumber = getRandom(1, 99);
   const sign = operators[getRandom(0, operators.length - 1)];
 
   return `${firstNumber} ${sign} ${secondNumber}`;

@@ -19,8 +19,8 @@ const gcd = (num1, num2) => {
 };
 
 const getQuestion = () => {
-  const firstNumber = Math.ceil(getRandom(1, 99));
-  const secondNumber = Math.ceil(getRandom(1, 99));
+  const firstNumber = getRandom(1, 99);
+  const secondNumber = getRandom(1, 99);
 
   return `${firstNumber} ${secondNumber}`;
 };
