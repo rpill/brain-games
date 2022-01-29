@@ -1,7 +1,7 @@
 import runCoreGame from '../index.js';
 import getRandom from '../utils.js';
 
-const desciption = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   const sqrt = Math.sqrt(num);
@@ -24,4 +24,4 @@ const getData = () => {
   return { question, answer };
 };
 
-export default () => runCoreGame(desciption, getData);
+export default () => runCoreGame(description, getData);

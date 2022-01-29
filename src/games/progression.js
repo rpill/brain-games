@@ -1,7 +1,7 @@
 import runCoreGame from '../index.js';
 import getRandom from '../utils.js';
 
-const desciption = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const generateProgression = () => {
   const length = getRandom(5, 10);
@@ -33,4 +33,4 @@ const getData = () => {
   return { question, answer };
 };
 
-export default () => runCoreGame(desciption, getData);
+export default () => runCoreGame(description, getData);

@@ -1,7 +1,7 @@
 import runCoreGame from '../index.js';
 import getRandom from '../utils.js';
 
-const desciption = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -16,4 +16,4 @@ const getData = () => {
   return { question, answer };
 };
 
-export default () => runCoreGame(desciption, getData);
+export default () => runCoreGame(description, getData);

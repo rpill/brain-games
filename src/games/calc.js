@@ -1,7 +1,7 @@
 import runCoreGame from '../index.js';
 import getRandom from '../utils.js';
 
-const desciption = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const math = {
   '+': (a, b) => a + b,
@@ -31,4 +31,4 @@ const getData = () => {
   return { question, answer };
 };
 
-export default () => runCoreGame(desciption, getData);
+export default () => runCoreGame(description, getData);
